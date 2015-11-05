@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "github",
+    "repository": "TeamEOS/kernel_lge_bullhead",
+    "target_path": "kernel/lge/bullhead",
+    "revision": "cm-13.0"
+  }
+]

@@ -1,18 +1,18 @@
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Eos stuff.
+$(call inherit-product, vendor/eos/config/common_full_phone.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/eos/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
 
+# Copy Bootanimation
+PRODUCT_COPY_FILES += \
+vendor/eos/prebuilt/common/bootanimation/1080.zip:system/media/bootanimation.zip
+
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_bullhead
+PRODUCT_NAME := eos_bullhead
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 5x
 TARGET_MANUFACTURER := LGE
